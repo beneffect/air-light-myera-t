@@ -1,0 +1,21 @@
+[build]
+  # Replace "your_current_build_command" with what Netlify normally runs
+  # e.g., "gulp build", "npm run build", or your specific build script.
+  # The mise command is added before your build command.
+  command = "mise settings add idiomatic_version_file_enable_tools node && your_current_build_command"
+  
+  # Replace "your_publish_directory" with your site's publish directory
+  # e.g., "dist", "public", "_site", "build"
+  publish = "your_publish_directory"
+
+# If you have specific Node.js version requirements, ensure you have a .nvmrc file
+# or set the NODE_VERSION environment variable in Netlify.
+# For example, if you use Netlify environment variables:
+# [build.environment]
+#   NODE_VERSION = "18" # Or your desired Node.js version
+
+# If you use Netlify Functions, you might have settings like this:
+# [functions]
+#   node_bundler = "esbuild"
+#   [functions.environment]
+#     NODE_VERSION = "18" # Or your desired Node.js version
